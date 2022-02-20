@@ -10,19 +10,21 @@ int main(){
 
     try{
 
+        srand(time(0));
+        int x = 8;
+        int y = 8;
+
         Simple_window win{Point{0,200}, 800, 1000, "My window"};
         win.wait_for_button();
 
         Lines grid;
-        int x = 800;
-        int y = 800;
-        for (int i = 0; i <= x; i+=100)
+        for (int i = 0; i <= (x*100);i+=100)
         {
-            grid.add(Point(0,i), Point(x, i));
+            grid.add(Point(0,i), Point(x*100, i));
         }
-        for (int i = 0; i <= y; i+=100)
+        for (int i = 0; i <= (y*100); i+=100)
         {
-            grid.add(Point(i,0), Point(i, y));
+            grid.add(Point(i,0), Point(i, y*100));
         }
         win.attach(grid);
         win.wait_for_button();
@@ -32,6 +34,7 @@ int main(){
         {
             rec.push_back(new Rectangle{Point{i*100,i*100}, Point{(i+1)*100,(i+1)*100}});
             rec[i].set_fill_color(Color::red);
+            rec[i].set_color(Color::invisible);
             win.attach(rec[i]);
         }
         win.wait_for_button();
@@ -44,16 +47,37 @@ int main(){
         win.attach(ii3);
         win.wait_for_button();
 
-        srand(time(0));
-        int nx = 8;
-        int ny = 8;
-        int r1 = (rand()%nx)*100, r2 = (rand()%ny)*100;
+        int r1 = (rand()%x)*100, r2 = (rand()%y)*100;
+        if ((r1 == 0 && r2 == 200) || (r1 == 100 && r2 == 200) || (r1 == 0 && r2 == 300) || (r1 == 100 && r2 == 300))
+        {
+            r1 = (rand()%x)*100, r2 = (rand()%y)*100;
+        }
+        if ((r1 == 600 && r2 == 200) || (r1 == 700 && r2 == 200) || (r1 == 600 && r2 == 300) || (r1 == 700 && r2 == 300))
+        {
+            r1 = (rand()%x)*100, r2 = (rand()%y)*100;
+        }
+        if ((r1 == 100 && r2 == 600) || (r1 == 200 && r2 == 600) || (r1 == 100 && r2 == 700) || (r1 == 200 && r2 == 700))
+        {
+            r1 = (rand()%x)*100, r2 = (rand()%y)*100;
+        }
         Image ii4 (Point{r1, r2}, "bruh.gif");
         win.attach(ii4);
         win.wait_for_button();
         while(true){
             ii4.move(-r1, -r2);
-            r1 = (rand()%nx)*100, r2 = (rand()%ny)*100;
+            r1 = (rand()%x)*100, r2 = (rand()%y)*100;
+            if ((r1 == 0 && r2 == 200) || (r1 == 100 && r2 == 200) || (r1 == 0 && r2 == 300) || (r1 == 100 && r2 == 300))
+            {
+                r1 = (rand()%x)*100, r2 = (rand()%y)*100;
+            }
+            if ((r1 == 600 && r2 == 200) || (r1 == 700 && r2 == 200) || (r1 == 600 && r2 == 300) || (r1 == 700 && r2 == 300))
+            {
+                r1 = (rand()%x)*100, r2 = (rand()%y)*100;
+            }
+            if ((r1 == 100 && r2 == 600) || (r1 == 200 && r2 == 600) || (r1 == 100 && r2 == 700) || (r1 == 200 && r2 == 700))
+            {
+                r1 = (rand()%x)*100, r2 = (rand()%y)*100;
+            }
             ii4.move(r1, r2);
             win.attach(ii4);
             win.wait_for_button();
