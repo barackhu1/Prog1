@@ -3,6 +3,7 @@
 #include <vector>
 #include <list>
 #include <array>
+#include <algorithm>
 
 using namespace std;
 
@@ -75,7 +76,15 @@ int main(){
 	print(vi2);
 	print(li2);
 
-	//std::find() template írása
 	//find(ai2.begin(), ai2.end(), 3);
 	//std::distance() cppreference.com
+
+	vector<int>::iterator vit;
+	vit = find(vi2.begin(),vi2.end(),3);
+	if (vit != vi2.end())
+	{
+		cout << "Found at: " << distance(vi2.begin(), vit) << endl;
+	}else{
+		cout << "Not found" << endl;
+	}
 }
