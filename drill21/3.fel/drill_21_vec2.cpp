@@ -25,13 +25,12 @@ values lower than (less than) the mean into vd2 .
 
 #include <iostream>
 #include <stdexcept>
-#include <string>
 #include <vector>
 #include <fstream>
 #include <numeric>
-#include <map>
+#include <string>
 #include <algorithm>
-#include <set>
+#include <functional>
 
 using namespace std;
 
