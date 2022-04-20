@@ -14,7 +14,7 @@ first).
 	
 	7. Remove (erase) two Item s identified by iid from vi .
 	
-	8. Repeat the exercise with a list<Item> rather than a vector<Item> .*/
+	8. Repeat the exercise with a list<Item> rather than a vector<Item>.*/
 
 #include <iostream>
 #include <stdexcept>
