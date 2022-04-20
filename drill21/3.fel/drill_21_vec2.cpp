@@ -30,7 +30,7 @@ values lower than (less than) the mean into vd2 .
 #include <numeric>
 #include <string>
 #include <algorithm>
-#include <functional>
+#include <functional>	
 
 using namespace std;
 
