@@ -16,15 +16,13 @@ first).
 	
 	8. Repeat the exercise with a list<Item> rather than a vector<Item>.*/
 
+
 #include <iostream>
-#include <stdexcept>
-#include <string>
 #include <vector>
 #include <fstream>
-#include <numeric>
-#include <map>
 #include <algorithm>
-#include <set>
+#include <iterator>
+#include <string>
 #include <list>
 
 using namespace std;
