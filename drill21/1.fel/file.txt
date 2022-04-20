@@ -1,0 +1,10 @@
+charger 44 2221.2
+keyboard 56 23.1
+mouse 11 343.12
+phone 23 987.2
+camera 37 543.2
+cable 12 723.9
+laptop 43 732.2
+router 80 444.3
+computer 22 232.8
+tv 40 434.3
