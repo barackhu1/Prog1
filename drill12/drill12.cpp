@@ -1,3 +1,17 @@
+/*	1. Get an empty Simple_window with the size 600 by 400 and a label My
+window compiled, linked, and run. Note that you have to link the FLTK
+library as described in Appendix D; #include Graph.h and Simple_
+window.h in your code; and include Graph.cpp and Window.cpp in your
+project.
+	
+	2. Now add the examples from §12.7 one by one, testing between each
+added subsection example.
+	
+	3. Go through and make one minor change (e.g., in color, in location, or in
+number of points) to each of the subsection examples.*/
+
+//g++ drill12.cpp ../GUI/Graph.cpp ../GUI/Window.cpp ../GUI/GUI.cpp ../GUI/Simple_window.cpp -o drill12 `fltk-config --ldflags --use-images`
+
 #include "../GUI/Graph.h"
 #include "../GUI/Simple_window.h"
 
@@ -5,7 +19,7 @@
 #include <string>
 
 using namespace Graph_lib;
-//g++ drill12.cpp ../GUI/Graph.cpp ../GUI/Window.cpp ../GUI/GUI.cpp ../GUI/Simple_window.cpp -o drill12 `fltk-config --ldflags --use-images`
+
 int main(){
 
 	try{
